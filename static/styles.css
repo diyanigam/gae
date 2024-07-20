@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+body{
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter';
+    font-weight: 500;
+    overflow: hidden;
+    line-height: 0rem;
+}
+
+.hert{
+    position: absolute;
+    left: 87.5vw;
+    top: 87.5vh;
+    text-align: right;
+}
+img{
+    position: absolute;
+    height: 45vh;
+    text-align: none;
+    margin-left: -25vw;
+}
+
+
+p{
+    color: #555;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.blob {
+    display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin: 20px auto;
+  width: 20vw;
+  height: 25vh;
+  background: white;
+  border-radius: 50px;
+  font-family: 'Montserrat';
+  font-weight: 400;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  transition: 1s box-shadow;
+  }
+  
+  .blob:hover {
+    box-shadow: 0 5px 35px 0px rgba(0,0,0,.1);
+  }
+  
+  .blob:hover::before, .blob:hover::after {
+    display: block;
+    content: '';
+    position: absolute;
+    width: 20vw;
+    height: 25vh;
+    background: #FDA8CF;
+    border-radius: 50px;
+    z-index: -1;
+    animation: 1s clockwise infinite;
+  }
+  
+  .blob:hover:after {
+    background: #F3CE5E;
+    animation: 2s counterclockwise infinite;
+  }
+  
+  @keyframes clockwise {
+    0% {
+      top: -5px;
+      left: 0;
+    }
+    12% {
+      top: -2px;
+      left: 2px;
+    }
+    25% {
+      top: 0;
+      left: 5px;    
+    }
+    37% {
+      top: 2px;
+      left: 2px;
+    }
+    50% {
+      top: 5px;
+      left: 0;    
+    }
+    62% {
+      top: 2px;
+      left: -2px;
+    }
+    75% {
+      top: 0;
+      left: -5px;
+    }
+    87% {
+      top: -2px;
+      left: -2px;
+    }
+    100% {
+      top: -5px;
+      left: 0;    
+    }
+  }
+  
+  @keyframes counterclockwise {
+    0% {
+      top: -5px;
+      right: 0;
+    }
+    12% {
+      top: -2px;
+      right: 2px;
+    }
+    25% {
+      top: 0;
+      right: 5px;    
+    }
+    37% {
+      top: 2px;
+      right: 2px;
+    }
+    50% {
+      top: 5px;
+      right: 0;    
+    }
+    62% {
+      top: 2px;
+      right: -2px;
+    }
+    75% {
+      top: 0;
+      right: -5px;
+    }
+    87% {
+      top: -2px;
+      right: -2px;
+    }
+    100% {
+      top: -5px;
+      right: 0;    
+    }
+  }
+
+
+
+
+
+
+.container {
+width: 100vw;
+  height: 100%;
+  position: fixed;
+}
+.confetti {
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  overflow: hidden;
+  left: 50%;
+  animation: confetti 2s ease-in-out -2s infinite;
+  transform-origin: left top;
+}
+.confetti:nth-child(1) {
+  background-color: #f2d74e; left: 10%; animation-delay: 0;
+}
+.confetti:nth-child(2) {
+  background-color: #95c3de; left: 20%; animation-delay: -1.15s;
+}
+.confetti:nth-child(3) {
+  background-color: #ff9a91; left: 30%; animation-delay: -0.3s;
+}
+.confetti:nth-child(4) {
+  background-color: #f2d74e; left: 40%; animation-delay: -3.5s;
+}
+.confetti:nth-child(5) {
+  background-color: #95c3de; left: 50%; animation-delay: -0.4s;
+}
+.confetti:nth-child(6) {
+  background-color: #ff9a91; left: 60%; animation-delay: -1.7s;
+}
+.confetti:nth-child(7) {
+  background-color: #f2d74e; left: 70%; animation-delay: -1.5s;
+}
+.confetti:nth-child(8) {
+  background-color: #95c3de; left: 80%; animation-delay: -2s;
+}
+.confetti:nth-child(9) {
+  background-color: #ff9a91; left: 90%; animation-delay: -3s;
+}
+.confetti:nth-child(10) {
+  background-color: #f2d74e; left: 100%; animation-delay: -5s;
+}
+
+@keyframes confetti {
+  0% { transform: rotateZ(15deg) rotateY(0deg) translate(0,0); }
+  25% { transform: rotateZ(5deg) rotateY(360deg) translate(-5vw,20vh); }
+  50% { transform: rotateZ(15deg) rotateY(720deg) translate(5vw,60vh); }
+  75% { transform: rotateZ(5deg) rotateY(1080deg) translate(-10vw,80vh); }
+  100% { transform: rotateZ(15deg) rotateY(1440deg) translate(10vw,100vh); }
+}
+
+
+
+ul {
+    display: flex;
+  }
+  
+  li {
+    list-style: none;
+  }
+
+  
+  input[type="checkbox"] {
+    opacity: 0;
+    margin: 0px;
+    cursor: pointer;
+    height: 40px;
+    width: 40px;
+    z-index: 100;
+    position: absolute;
+    display: flex;
+  }
+  
+  .x {
+    height: 40px;
+    width: 40px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    cursor: pointer;
+    border-radius: 20px;
+  }
+
+  input[type="checkbox"]:checked ~ .x {
+    color: yellow;
+    animation: glow 1.5s linear infinite;
+  }
+  
+  @keyframes glow {
+    0% {
+      filter: hue-rotate(0deg);
+    }
+    100% {
+      filter: hue-rotate(360deg);
+    }
+  }
